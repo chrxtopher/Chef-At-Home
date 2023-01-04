@@ -6,28 +6,28 @@ function Header() {
   return (
     <nav>
       <Link to="/">
-        <button>Home</button>
+        <button className="nav-button">Home</button>
       </Link>
 
       <ul>
         <li>
           <Link to="/">
-            <button>Meals</button>
+            <button className="nav-button">Meals</button>
           </Link>
         </li>
         <li>
           <Link to="/">
-            <button>Bites</button>
+            <button className="nav-button">Bites</button>
           </Link>
         </li>
         <li>
           <Link to="/">
-            <button>Desserts</button>
+            <button className="nav-button">Desserts</button>
           </Link>
         </li>
         <li>
           <Link to="/">
-            <button>Search</button>
+            <button className="nav-button">Search</button>
           </Link>
         </li>
       </ul>

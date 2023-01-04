@@ -7,11 +7,13 @@ body {
 }
 
 nav {
+  height: 5rem;
   display: flex;
   justify-content: space-between;
   padding: 1rem;
   gap: 2rem;
   align-items: center;
+  background-color: rgba(240, 240, 240, 1)
 }
 
 nav ul {
@@ -22,6 +24,19 @@ nav ul {
 }
 
 li {
-  margin: 0px 10px 0px 10px;
-  border: 1px solid red;
+  margin: 0px 8px 0px 8px;
+}
+
+.nav-button {
+  padding: 8px 12px 8px 12px;
+  border: none;
+  border-radius: 3px;
+  background: local;
+  font-size: 18px;
+}
+
+.nav-button:hover {
+  color: white;
+  background-color: rgba(0, 145, 60, 0.8);
+  
 }
