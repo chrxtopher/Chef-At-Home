@@ -29,13 +29,14 @@ label {
 
 input {
   margin: 5px 5px 5px 5px;
-  font-size: 14px;
 }
 
 .num-input {
   width: 50px;
   height: 25px;
   text-align: center;
+  font-size: 16px;
+  align-items: center;
 }
 
 select {
@@ -43,7 +44,7 @@ select {
   height: 25px;
   text-align: center;
   margin-left: 5px;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .submit-button {
@@ -53,11 +54,11 @@ select {
   height: 35px;
   font-size: 16px;
   text-align: center;
-  background-color: rgba(0, 145, 60, .75);
+  background-color: rgba(0, 145, 60, .6);
   cursor: pointer;
 }
 
 .submit-button:hover {
   color: white;
-  background-color: rgba(0, 145, 60, 1);;
+  background-color: rgba(0, 145, 60, .9);
 }
