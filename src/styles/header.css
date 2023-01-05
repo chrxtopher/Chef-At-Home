@@ -33,6 +33,7 @@ li {
   border-radius: 3px;
   background: local;
   font-size: 18px;
+  cursor: pointer;
 }
 
 .nav-button:hover {
