@@ -3,7 +3,7 @@ import { useState } from "react";
 
 import "../styles/filterForm.css";
 
-function FilterRecipe() {
+function FilterRecipe({ dishType = ["main course"] }) {
   const defaultFilterObj = {
     vegan: false,
     vegetarian: false,
@@ -12,9 +12,14 @@ function FilterRecipe() {
     dairyFree: false,
     protein: "",
     servSize: 1,
+    dishType: dishType,
   };
 
   const [filterObj, setFilterObj] = useState(defaultFilterObj);
+
+  //////////////////////////
+  // EVENT HANDLERS BELOW //
+  //////////////////////////
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -41,6 +46,10 @@ function FilterRecipe() {
       [event.target.name]: parseInt(event.target.value),
     });
   };
+
+  /////////////////////////
+  // FORM ELEMENTS BELOW //
+  /////////////////////////
 
   return (
     <form className="filter-form" onSubmit={handleSubmit}>
@@ -81,8 +90,8 @@ function FilterRecipe() {
           Gluten Free:
           <input
             type="checkbox"
-            name="gluten_free"
-            id="gluten_free"
+            name="glutenFree"
+            id="glutenFree"
             value="glutenFree"
             onChange={handleCheckboxChange}
           ></input>
@@ -91,8 +100,8 @@ function FilterRecipe() {
           Dairy Free:
           <input
             type="checkbox"
-            name="dairy_free"
-            id="dairy_free"
+            name="dairyFree"
+            id="dairyFree"
             value="dairyFree"
             onChange={handleCheckboxChange}
           ></input>
@@ -100,8 +109,12 @@ function FilterRecipe() {
       </div>
       <label>
         Protein:
-        <select name="protein" onChange={handleProteinChange} disabled={false}>
-          <option value="none">Select</option>
+        <select
+          name="protein"
+          onChange={handleProteinChange}
+          disabled={filterObj.vegan || filterObj.vegetarian ? true : false}
+        >
+          <option value="">Select</option>
           <option value="chicken">Chicken</option>
           <option value="beef">Beef</option>
           <option value="pork">Pork</option>
