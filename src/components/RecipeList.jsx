@@ -1,6 +1,7 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import { getFilteredRecipes } from "../utility/api";
+const samples = require("../samples.json");
 
 function RecipeList({ filterOptions = { options: "none" } }) {
   const [recipeItems, setRecipeItems] = useState([]);
