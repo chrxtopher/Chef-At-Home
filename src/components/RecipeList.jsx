@@ -22,7 +22,7 @@ function RecipeList({ filterOptions = { options: "none" } }) {
       <ul>
         {sample.results.map((recipe) => {
           return (
-            <li>
+            <li key={recipe.id}>
               <SmallRecipeItem
                 id={recipe.id}
                 title={recipe.title}
