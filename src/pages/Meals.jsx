@@ -2,6 +2,7 @@ import React from "react";
 
 import Header from "../components/Header";
 import FilterRecipe from "../components/FilterRecipe";
+import "../styles/mealsPage.css";
 
 function Meals() {
   return (
