@@ -27,9 +27,10 @@ body {
 }
 
 .small-recipe-item h3 {
-  font-size: 18px;
+  font-size: 22px;
   display: flex;
   flex-wrap: wrap;
+  font-weight: lighter;
 }
 
 .small-recipe-button {
@@ -37,7 +38,7 @@ body {
   align-items: center;
   justify-content: center;
   padding-bottom: 3px;
-  margin-top: .7rem;
+  margin-top: 1rem;
   border: none;
   border-radius: 3px;
   width: 100px;
