@@ -1,7 +1,8 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import { getFilteredRecipes } from "../utility/api";
-const samples = require("../samples.json");
+import SmallRecipeItem from "./SmallRecipeItem";
+const sample = require("../samples.json");
 
 function RecipeList({ filterOptions = { options: "none" } }) {
   const [recipeItems, setRecipeItems] = useState([]);
@@ -19,6 +20,19 @@ function RecipeList({ filterOptions = { options: "none" } }) {
   return (
     <div>
       <h3>Recipe List</h3>
+      <ul>
+        {sample.results.map((recipe) => {
+          return (
+            <li>
+              <SmallRecipeItem
+                id={recipe.id}
+                title={recipe.title}
+                image={recipe.image}
+              />
+            </li>
+          );
+        })}
+      </ul>
     </div>
   );
 }
