@@ -19,7 +19,6 @@ function RecipeList({ filterOptions = { options: "none" } }) {
 
   return (
     <div>
-      <h3>Recipe List</h3>
       <ul>
         {sample.results.map((recipe) => {
           return (
