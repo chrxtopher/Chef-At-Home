@@ -8,7 +8,7 @@ function FilterRecipe({ dishType = ["main course"] }) {
   const [filters, setFilters] = useState({
     diet: [],
     protein: "",
-    servSize: 1,
+    cuisine: "",
     dishType: dishType,
   });
   const [filterObj, setFilterObj] = useState(filters);
@@ -20,6 +20,7 @@ function FilterRecipe({ dishType = ["main course"] }) {
   const handleSubmit = (event) => {
     event.preventDefault();
     setFilterObj(filters);
+    console.log(filters);
   };
 
   const handleCheckboxChange = (event) => {
@@ -36,17 +37,10 @@ function FilterRecipe({ dishType = ["main course"] }) {
     });
   };
 
-  const handleProteinChange = (event) => {
+  const handleSelectChange = (event) => {
     setFilters({
       ...filters,
       [event.target.name]: event.target.value,
-    });
-  };
-
-  const handleServSizeChange = (event) => {
-    setFilters({
-      ...filters,
-      [event.target.name]: parseInt(event.target.value),
     });
   };
 
@@ -125,10 +119,15 @@ function FilterRecipe({ dishType = ["main course"] }) {
           Protein:
           <select
             name="protein"
-            onChange={handleProteinChange}
-            disabled={filterObj.vegan || filterObj.vegetarian ? true : false}
+            onChange={handleSelectChange}
+            disabled={
+              filters.diet.includes("vegan") ||
+              filters.diet.includes("vegetarian")
+                ? true
+                : false
+            }
           >
-            <option value="">Select</option>
+            <option value="">Any</option>
             <option value="chicken">Chicken</option>
             <option value="beef">Beef</option>
             <option value="pork">Pork</option>
@@ -140,17 +139,37 @@ function FilterRecipe({ dishType = ["main course"] }) {
         </label>
 
         <label>
-          Serving Size:
-          <input
-            type="number"
-            name="servSize"
-            id="servSize"
-            defaultValue="1"
-            min="1"
-            max="20"
-            className="num-input"
-            onChange={handleServSizeChange}
-          ></input>
+          Cuisine:
+          <select
+            name="cuisine"
+            onChange={handleSelectChange}
+            className="cuisine-select"
+          >
+            <option value="">Any</option>
+            <option value="african">African</option>
+            <option value="american">American</option>
+            <option value="british">British</option>
+            <option value="cajun">Cajun</option>
+            <option value="caribbean">Caribbean</option>
+            <option value="chinese">Chinese</option>
+            <option value="european">European</option>
+            <option value="french">French</option>
+            <option value="german">German</option>
+            <option value="greek">Greek</option>
+            <option value="indian">Indian</option>
+            <option value="irish">Irish</option>
+            <option value="italian">Italian</option>
+            <option value="japanese">Japanese</option>
+            <option value="korean">Korean</option>
+            <option value="latinamerica">Latin America</option>
+            <option value="mediterranean">Mediterranean</option>
+            <option value="mexican">Mexican</option>
+            <option value="middleeastern">Middle Eastern</option>
+            <option value="southern">Southern</option>
+            <option value="spanish">Spanish</option>
+            <option value="thai">Thai</option>
+            <option value="vietnamese">Vietnamese</option>
+          </select>
         </label>
         <button type="submit" className="submit-button">
           Search
