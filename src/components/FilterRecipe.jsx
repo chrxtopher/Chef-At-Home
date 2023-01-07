@@ -5,18 +5,13 @@ import "../styles/filterForm.css";
 import RecipeList from "./RecipeList";
 
 function FilterRecipe({ dishType = ["main course"] }) {
-  const defaultFilterObj = {
-    vegan: false,
-    vegetarian: false,
-    ketogenic: false,
-    glutenFree: false,
-    dairyFree: false,
+  const [filters, setFilters] = useState({
+    diet: [],
     protein: "",
     servSize: 1,
     dishType: dishType,
-  };
-
-  const [filterObj, setFilterObj] = useState(defaultFilterObj);
+  });
+  const [filterObj, setFilterObj] = useState(filters);
 
   //////////////////////////
   // EVENT HANDLERS BELOW //
@@ -24,26 +19,33 @@ function FilterRecipe({ dishType = ["main course"] }) {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(filterObj);
+    setFilterObj(filters);
   };
 
   const handleCheckboxChange = (event) => {
-    setFilterObj({
-      ...filterObj,
-      [event.target.value]: !filterObj[event.target.value],
+    const dietArray = filters.diet;
+    if (!filters.diet.includes(event.target.value)) {
+      dietArray.push(event.target.value);
+    } else {
+      const index = dietArray.indexOf(event.target.value);
+      dietArray.splice(index, 1);
+    }
+    setFilters({
+      ...filters,
+      diet: dietArray,
     });
   };
 
   const handleProteinChange = (event) => {
-    setFilterObj({
-      ...filterObj,
+    setFilters({
+      ...filters,
       [event.target.name]: event.target.value,
     });
   };
 
   const handleServSizeChange = (event) => {
-    setFilterObj({
-      ...filterObj,
+    setFilters({
+      ...filters,
       [event.target.name]: parseInt(event.target.value),
     });
   };
@@ -77,7 +79,7 @@ function FilterRecipe({ dishType = ["main course"] }) {
             ></input>
           </label>
           <label>
-            Keto Friendly:
+            Ketogenic:
             <input
               type="checkbox"
               name="ketogenic"
@@ -92,19 +94,29 @@ function FilterRecipe({ dishType = ["main course"] }) {
             Gluten Free:
             <input
               type="checkbox"
-              name="glutenFree"
-              id="glutenFree"
-              value="glutenFree"
+              name="glutenfree"
+              id="glutenfree"
+              value="glutenfree"
               onChange={handleCheckboxChange}
             ></input>
           </label>
           <label>
-            Dairy Free:
+            Paleo:
             <input
               type="checkbox"
-              name="dairyFree"
-              id="dairyFree"
-              value="dairyFree"
+              name="paleo"
+              id="paleo"
+              value="paleo"
+              onChange={handleCheckboxChange}
+            ></input>
+          </label>
+          <label>
+            Pescetarian:
+            <input
+              type="checkbox"
+              name="pescetarian"
+              id="pescetarian"
+              value="pescetarian"
               onChange={handleCheckboxChange}
             ></input>
           </label>
