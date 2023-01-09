@@ -10,6 +10,7 @@ function FilterRecipe({ dishType = ["main course"] }) {
     protein: "",
     cuisine: "",
     dishType: dishType,
+    submitted: false,
   });
   const [filterObj, setFilterObj] = useState(filters);
 
@@ -19,8 +20,10 @@ function FilterRecipe({ dishType = ["main course"] }) {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    setFilterObj(filters);
-    console.log(filters);
+    setFilterObj({
+      ...filters,
+      submitted: true,
+    });
   };
 
   const handleCheckboxChange = (event) => {
@@ -135,6 +138,8 @@ function FilterRecipe({ dishType = ["main course"] }) {
             <option value="crab">Crab</option>
             <option value="tuna">Tuna</option>
             <option value="salmon">Salmon</option>
+            <option value="tofu">Tofu</option>
+            <option value="">None</option>
           </select>
         </label>
 
