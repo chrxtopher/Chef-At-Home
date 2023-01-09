@@ -2,7 +2,9 @@ import React from "react";
 import { useEffect, useState } from "react";
 import { getFilteredRecipes } from "../utility/api";
 import SmallRecipeItem from "./SmallRecipeItem";
-const sample = require("../samples.json");
+import NoSearch from "./NoSearch";
+import "../styles/recipeList.css";
+// const sample = require("../samples.json");
 
 function RecipeList({ filterOptions = { options: "none" } }) {
   const [recipeItems, setRecipeItems] = useState([]);
@@ -10,28 +12,30 @@ function RecipeList({ filterOptions = { options: "none" } }) {
   useEffect(() => {
     async function getRecipes() {
       const response = await getFilteredRecipes(filterOptions);
-      setRecipeItems(response);
-      console.log(response);
+      setRecipeItems(response.results);
     }
 
     // getRecipes();
   }, [filterOptions]);
 
   return (
-    <div>
-      <ul>
-        {sample.results.map((recipe) => {
-          return (
-            <li key={recipe.id}>
-              <SmallRecipeItem
-                id={recipe.id}
-                title={recipe.title}
-                image={recipe.image}
-              />
-            </li>
-          );
-        })}
-      </ul>
+    <div className="recipe-list">
+      {!filterOptions.submitted && <NoSearch />}
+      {filterOptions.submitted && recipeItems.length > 0 && (
+        <ul>
+          {recipeItems.map((recipe) => {
+            return (
+              <li key={recipe.id}>
+                <SmallRecipeItem
+                  id={recipe.id}
+                  title={recipe.title}
+                  image={recipe.image}
+                />
+              </li>
+            );
+          })}
+        </ul>
+      )}
     </div>
   );
 }
