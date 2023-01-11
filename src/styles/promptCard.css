@@ -15,6 +15,10 @@ body {
   background-color: rgba(245, 245, 245, 1);
   border-radius: 8px;
   padding: 0 1rem 1rem 1rem;
-  max-width: 60%;
+  max-width: 40%;
   font-size: 16px;
+}
+
+.prompt-card h4 {
+  font-size: 18px;
 }
