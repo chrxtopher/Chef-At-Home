@@ -2,7 +2,7 @@ import React from "react";
 import { useEffect, useState } from "react";
 import { getFilteredRecipes } from "../utility/api";
 import SmallRecipeItem from "./SmallRecipeItem";
-import NoSearch from "./NoSearch";
+import PromptCard from "./PromptCard";
 import "../styles/recipeList.css";
 // const sample = require("../samples.json");
 
@@ -20,7 +20,12 @@ function RecipeList({ filterOptions = { options: "none" } }) {
 
   return (
     <div className="recipe-list">
-      {!filterOptions.submitted && <NoSearch />}
+      {!filterOptions.submitted && (
+        <PromptCard
+          cardTitle="Use The Filters Above"
+          message="The filters above allow you to adjust recipe results to your liking. If you would like to spice things up and get a list of random recipes, simply leave the form blank and click search!"
+        />
+      )}
       {filterOptions.submitted && recipeItems.length > 0 && (
         <ul>
           {recipeItems.map((recipe) => {
