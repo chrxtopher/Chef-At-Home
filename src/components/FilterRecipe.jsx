@@ -26,6 +26,17 @@ function FilterRecipe({ dishType = ["main course"] }) {
     });
   };
 
+  const handleReset = (event) => {
+    setFilters({
+      ...filters,
+      diet: [],
+      protein: "",
+      cuisine: "",
+      dishType: dishType,
+      submitted: false,
+    });
+  };
+
   const handleCheckboxChange = (event) => {
     const dietArray = filters.diet;
     if (!filters.diet.includes(event.target.value)) {
@@ -46,6 +57,11 @@ function FilterRecipe({ dishType = ["main course"] }) {
       [event.target.name]: event.target.value,
     });
   };
+
+  // const logFilters = (event) => {
+  //   event.preventDefault();
+  //   console.log(filters);
+  // };
 
   /////////////////////////
   // FORM ELEMENTS BELOW //
@@ -120,16 +136,7 @@ function FilterRecipe({ dishType = ["main course"] }) {
         </div>
         <label>
           Protein:
-          <select
-            name="protein"
-            onChange={handleSelectChange}
-            disabled={
-              filters.diet.includes("vegan") ||
-              filters.diet.includes("vegetarian")
-                ? true
-                : false
-            }
-          >
+          <select name="protein" onChange={handleSelectChange}>
             <option value="">Any</option>
             <option value="chicken">Chicken</option>
             <option value="beef">Beef</option>
@@ -176,9 +183,17 @@ function FilterRecipe({ dishType = ["main course"] }) {
             <option value="vietnamese">Vietnamese</option>
           </select>
         </label>
-        <button type="submit" className="submit-button">
-          Search
-        </button>
+        <div className="form-buttons">
+          <button type="submit" className="submit-button">
+            Search
+          </button>
+          <button type="reset" className="reset-button" onClick={handleReset}>
+            Reset
+          </button>
+          {/* <button type="button" onClick={logFilters}>
+            LOG
+          </button> */}
+        </div>
       </form>
 
       <RecipeList filterOptions={filterObj} />
