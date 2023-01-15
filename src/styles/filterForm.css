@@ -39,10 +39,16 @@ select {
   font-size: 14px;
 }
 
+.form-buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
 .submit-button {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 0.5rem;
   padding-bottom: 5px;
   border: none;
   border-radius: 3px;
@@ -56,5 +62,26 @@ select {
 
 .submit-button:hover {
   color: white;
-  background-color: rgba(0, 145, 60, .9);
+  background-color: rgba(0, 145, 60, 1);
+}
+
+.reset-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0.5rem;
+  padding-bottom: 5px;
+  border: none;
+  border-radius: 3px;
+  width: 100px;
+  height: 35px;
+  font-size: 16px;
+  text-align: center;
+  background-color: rgba(255, 90, 20, .5);
+  cursor: pointer;
+}
+
+.reset-button:hover {
+  color: white;
+  background-color: rgba(255, 90, 20, 1);
 }
