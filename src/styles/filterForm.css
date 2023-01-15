@@ -62,7 +62,7 @@ select {
 
 .submit-button:hover {
   color: white;
-  background-color: rgba(0, 145, 60, 1);
+  background-color: rgba(0, 145, 60, .9);
 }
 
 .reset-button {
@@ -83,5 +83,5 @@ select {
 
 .reset-button:hover {
   color: white;
-  background-color: rgba(255, 90, 20, 1);
+  background-color: rgba(255, 90, 20, .9);
 }
