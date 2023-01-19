@@ -29,6 +29,7 @@ function RecipeList({ filterOptions = { options: "none" } }) {
         />
       )}
 
+      {/* will render before user completes a search */}
       {filterOptions.submitted && recipeItems.length <= 0 && (
         <PromptCard
           cardTitle={cardMessages.noResults.title}
@@ -36,6 +37,7 @@ function RecipeList({ filterOptions = { options: "none" } }) {
         />
       )}
 
+      {/* will render after user searches & gets no results */}
       {filterOptions.submitted && recipeItems.length > 0 && (
         <ul>
           {recipeItems.map((recipe) => {
