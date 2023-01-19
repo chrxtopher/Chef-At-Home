@@ -7,6 +7,10 @@ export async function getFilteredRecipes(filterObj = {}) {
   const dishType = filterObj.dishType.join();
   const url = `${BASE_URL}complexSearch?diet=${diet}&cuisine=${filterObj.cuisine}&type=${dishType}&includeIngredients=${filterObj.protein}&${CABOOSE}`;
 
-  const response = await fetch(url).then((response) => response.json());
-  return response;
+  try {
+    const response = await fetch(url).then((response) => response.json());
+    return response;
+  } catch (error) {
+    console.error(`ERROR :: ${error}`);
+  }
 }
