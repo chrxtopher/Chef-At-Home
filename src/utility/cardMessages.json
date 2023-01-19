@@ -1,0 +1,10 @@
+{
+  "noSearch": {
+    "title": "Use The Filters Above",
+    "message": "The filters above allow you to adjust recipe results to your liking. If you would like to spice things up and get a list of random recipes, simply leave the form blank and click search!"
+  },
+  "noResults": {
+    "title": "No Results",
+    "message": "There was nothing on the menu that matched your filter options. Try adjusting your selections."
+  }
+}
