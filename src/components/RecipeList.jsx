@@ -4,6 +4,8 @@ import { getFilteredRecipes } from "../utility/api";
 import SmallRecipeItem from "./SmallRecipeItem";
 import PromptCard from "./PromptCard";
 import "../styles/recipeList.css";
+
+const cardMessages = require("../utility/cardMessages.json");
 // const sample = require("../samples.json");
 
 function RecipeList({ filterOptions = { options: "none" } }) {
@@ -22,15 +24,15 @@ function RecipeList({ filterOptions = { options: "none" } }) {
     <div className="recipe-list">
       {!filterOptions.submitted && (
         <PromptCard
-          cardTitle="Use The Filters Above"
-          message="The filters above allow you to adjust recipe results to your liking. If you would like to spice things up and get a list of random recipes, simply leave the form blank and click search!"
+          cardTitle={cardMessages.noSearch.title}
+          message={cardMessages.noSearch.message}
         />
       )}
 
       {filterOptions.submitted && recipeItems.length <= 0 && (
         <PromptCard
-          cardTitle="No Results"
-          message="There was nothing on the menu that matched your filter options. Try adjusting your selections."
+          cardTitle={cardMessages.noResults.title}
+          message={cardMessages.noResults.message}
         />
       )}
 
