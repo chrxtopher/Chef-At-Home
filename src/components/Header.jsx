@@ -1,34 +1,44 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import NavButton from "./NavButton";
 import "../styles/header.css";
 
-function Header() {
+function Header({ active = "none" }) {
   return (
     <nav>
-      <Link to="/">
-        <button className="nav-button">Home</button>
-      </Link>
+      <NavButton
+        name="Home"
+        active={active === "home" ? true : false}
+        pageUrl=""
+      />
 
       <ul>
         <li>
-          <Link to="/meals">
-            <button className="nav-button">Meals</button>
-          </Link>
+          <NavButton
+            name="Meals"
+            active={active === "meals" ? true : false}
+            pageUrl="meals"
+          />
         </li>
         <li>
-          <Link to="/bites">
-            <button className="nav-button">Bites</button>
-          </Link>
+          <NavButton
+            name="Bites"
+            active={active === "bites" ? true : false}
+            pageUrl="bites"
+          />
         </li>
         <li>
-          <Link to="/desserts">
-            <button className="nav-button">Desserts</button>
-          </Link>
+          <NavButton
+            name="Desserts"
+            active={active === "desserts" ? true : false}
+            pageUrl="desserts"
+          />
         </li>
         <li>
-          <Link to="/search">
-            <button className="nav-button">Search</button>
-          </Link>
+          <NavButton
+            name="Search"
+            active={active === "search" ? true : false}
+            pageUrl="search"
+          />
         </li>
       </ul>
     </nav>
