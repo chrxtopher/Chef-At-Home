@@ -7,7 +7,7 @@ import "../styles/mealsPage.css";
 function Meals() {
   return (
     <div>
-      <Header />
+      <Header active="meals" />
       <h1>Main Course Meals</h1>
       <p>
         Whether you are cooking for one, impressing a date, or feeding the whole
