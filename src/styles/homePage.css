@@ -35,7 +35,7 @@ body {
   padding: 16rem;
   background-image: url("../images/table-of-food.jpeg");
   background-size: cover;
-  box-shadow: 0 0 8px 8px rgb(20, 20, 20) inset;
+  box-shadow: 0 0 10px 10px rgb(20, 20, 20) inset;
 }
 
 .home-section {
