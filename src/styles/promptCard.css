@@ -12,13 +12,14 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgba(245, 245, 245, 1);
+  background-color: rgba(35, 35, 35, 1);
   border-radius: 8px;
   padding: 0 1rem 1rem 1rem;
   max-width: 40%;
   font-size: 16px;
+  box-shadow: 0 0 10px 10px rgb(20, 20, 20, 1) inset;
 }
 
 .prompt-card h4 {
-  font-size: 18px;
+  font-size: 1.5rem;
 }

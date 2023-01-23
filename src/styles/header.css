@@ -13,7 +13,7 @@ nav {
   padding: 1rem;
   gap: 2rem;
   align-items: center;
-  background-color: rgba(245, 245, 245, 1);
+  background-color: rgb(20, 20, 20);
 }
 
 nav ul {
@@ -38,7 +38,6 @@ li {
 }
 
 .active-nav-button:hover {
-  color: white;
   background-color: rgba(0, 145, 60, 0.8);
   border-bottom: 3px solid rgba(0, 145, 60, 0);
 }
@@ -53,7 +52,6 @@ li {
 }
 
 .inactive-nav-button:hover {
-  color: white;
   background-color: rgba(0, 145, 60, 0.8);
   
 }
