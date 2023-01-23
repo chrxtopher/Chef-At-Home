@@ -1,12 +1,15 @@
 * {
   box-sizing: border-box;
   font-family: 'Gentium Plus', 'Oxygen', 'Ubuntu', 'Cantarell','Roboto', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  color: white;
 }
 
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(20, 20, 20);
+  
 }
 
 code {
