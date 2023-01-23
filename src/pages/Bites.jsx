@@ -1,11 +1,21 @@
 import React from "react";
+import { motion as m } from "framer-motion";
+
 import Header from "../components/Header";
 
 function Bites() {
   return (
     <div>
-      <Header active="bites" />
-      <h1>Bites Page</h1>
+      <header>
+        <Header active="bites" />
+      </header>
+      <m.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+      >
+        <h1>Bites Page</h1>
+      </m.div>
     </div>
   );
 }

@@ -1,11 +1,21 @@
 import React from "react";
+import { motion as m } from "framer-motion";
+
 import Header from "../components/Header";
 
 function SearchRecipe() {
   return (
     <div>
-      <Header active="search" />
-      <h1>Search Page</h1>
+      <header>
+        <Header active="search" />
+      </header>
+      <m.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+      >
+        <h1>Search Page</h1>
+      </m.div>
     </div>
   );
 }
