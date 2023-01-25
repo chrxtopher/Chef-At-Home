@@ -1,29 +1,21 @@
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-}
-
 .small-recipe-item {
-  border-radius: 8px;
+  border-radius: 30px;
   display: flex;
   flex-direction: column;
   list-style: none;
   margin: 1rem;
-  padding: 0 1rem 1rem 1rem;
+  padding: 0.5rem 1rem 1rem 1rem;
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-color: rgba(245, 245, 245, 1);
-  max-width: 350px;
+  background-color: rgba(35, 35, 35, 1);
+  box-shadow: 0 0 10px 10px rgb(20, 20, 20, 1) inset;
+  width: 30rem;
 }
 
 .small-recipe-item img {
-  width: 90%;
-  height: 90%;
   border-radius: 5px;
+  width: 85%;
 }
 
 .small-recipe-item h3 {

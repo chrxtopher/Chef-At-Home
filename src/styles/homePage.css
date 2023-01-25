@@ -40,7 +40,7 @@ body {
 
 .home-section {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   padding: 5rem;
   gap: 5rem;
@@ -50,7 +50,7 @@ body {
   font-size: 3rem;
   margin: 1rem;
   width: 25rem;
-  min-width: 25rem;
+  min-width: 20rem;
   background-size: cover;
   box-shadow: 0 0 12px 12px rgb(20, 20, 20) inset;
 }
