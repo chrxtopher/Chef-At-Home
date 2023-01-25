@@ -18,9 +18,10 @@ function Meals() {
       >
         <h1>Main Course Meals</h1>
         <p>
-          Whether you are cooking for one, impressing a date, or feeding the
-          whole family, there is a recipe here for you! Use the filters below to
-          help pin-point your next meal!
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.
         </p>
         <FilterRecipe
           dishType={["main course", "salad", "soup", "lunch", "dinner"]}
