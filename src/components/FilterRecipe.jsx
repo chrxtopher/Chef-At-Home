@@ -58,11 +58,6 @@ function FilterRecipe({ dishType = ["main course"] }) {
     });
   };
 
-  // const logFilters = (event) => {
-  //   event.preventDefault();
-  //   console.log(filters);
-  // };
-
   /////////////////////////
   // FORM ELEMENTS BELOW //
   /////////////////////////
@@ -190,9 +185,6 @@ function FilterRecipe({ dishType = ["main course"] }) {
           <button type="reset" className="reset-button" onClick={handleReset}>
             Reset
           </button>
-          {/* <button type="button" onClick={logFilters}>
-            LOG
-          </button> */}
         </div>
       </form>
 

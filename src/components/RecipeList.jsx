@@ -6,7 +6,7 @@ import PromptCard from "./PromptCard";
 import "../styles/recipeList.css";
 
 const cardMessages = require("../utility/cardMessages.json");
-// const sample = require("../samples.json");
+// const samples = require("../samples.json");
 
 function RecipeList({ filterOptions = { options: "none" } }) {
   const [recipeItems, setRecipeItems] = useState([]);
@@ -30,6 +30,7 @@ function RecipeList({ filterOptions = { options: "none" } }) {
       )}
 
       {/* will render before user completes a search */}
+
       {filterOptions.submitted && recipeItems.length <= 0 && (
         <PromptCard
           cardTitle={cardMessages.noResults.title}
