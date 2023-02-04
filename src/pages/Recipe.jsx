@@ -4,10 +4,16 @@ import { motion as m } from "framer-motion";
 
 import { getRecipe } from "../utility/api";
 import Header from "../components/Header";
+import LargeRecipeItem from "../components/LargeRecipeItem";
+
+const samples = require("../samples.json");
+const testRecipe = samples.results[0];
+
+// http://localhost:3000/recipe/715415 - for testing
 
 function Recipe() {
   const { recipeId } = useParams();
-  const [recipe, setRecipe] = useState({});
+  const [recipe, setRecipe] = useState(testRecipe);
 
   useEffect(() => {
     async function getFullRecipe(recipeId) {
@@ -15,31 +21,21 @@ function Recipe() {
       setRecipe(response);
     }
 
-    getFullRecipe(recipeId);
+    // getFullRecipe(recipeId);
   }, [recipeId]);
-
-  const handleTest = () => {
-    console.log(recipe);
-  };
 
   return (
     <div>
       <header>
         <Header />
       </header>
-      <button onClick={handleTest}>TEST</button>
       <m.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
       >
-        <h1>Recipe</h1>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.
-        </p>
+        <h2>{recipe.title}</h2>
+        <LargeRecipeItem recipe={recipe} />
       </m.div>
     </div>
   );
