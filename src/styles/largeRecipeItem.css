@@ -1,0 +1,22 @@
+.large-recipe-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem;
+  border: 1px solid red;
+}
+
+.large-recipe-info {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.large-recipe-info p {
+  font-size: 1.5rem;
+}
+
+.large-recipe-img img {
+  border-radius: 8px;
+}
+
