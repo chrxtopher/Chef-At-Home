@@ -14,3 +14,14 @@ export async function getFilteredRecipes(filterObj = {}) {
     console.error(`ERROR :: ${error}`);
   }
 }
+
+export async function getRecipe(recipeId = 111111) {
+  const url = `${BASE_URL}${recipeId}/information?apiKey=${API_KEY}}`;
+
+  try {
+    const response = await fetch(url).then((response) => response.json());
+    return response;
+  } catch (error) {
+    console.error(`ERROR :: ${error}`);
+  }
+}
