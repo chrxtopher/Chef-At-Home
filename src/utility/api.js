@@ -16,7 +16,7 @@ export async function getFilteredRecipes(filterObj = {}) {
 }
 
 export async function getRecipe(recipeId = 111111) {
-  const url = `${BASE_URL}${recipeId}/information?apiKey=${API_KEY}}`;
+  const url = `${BASE_URL}${recipeId}/information?apiKey=${API_KEY}`;
 
   try {
     const response = await fetch(url).then((response) => response.json());
