@@ -8,13 +8,13 @@ import Footer from "../components/Footer";
 import LargeRecipeItem from "../components/LargeRecipeItem";
 
 const samples = require("../samples.json");
-const testRecipe = samples.results[0];
+// const testRecipe = samples.results[0];
 
 // http://localhost:3000/recipe/715415 - for testing
 
 function Recipe() {
   const { recipeId } = useParams();
-  const [recipe, setRecipe] = useState(testRecipe);
+  const [recipe, setRecipe] = useState({});
 
   useEffect(() => {
     async function getFullRecipe(recipeId) {
