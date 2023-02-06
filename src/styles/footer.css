@@ -1,0 +1,19 @@
+footer {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.75rem;
+}
+
+footer a {
+  text-decoration: none;
+  color: rgba(0, 210, 85, 1);
+}
+
+footer a:hover {
+  color: rgba(0, 145, 60, 0.8);
+}
+
+footer p {
+  margin: 0.5rem;
+  font-size: 0.9rem;
+}
