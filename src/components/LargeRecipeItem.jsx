@@ -15,8 +15,8 @@ function LargeRecipeItem({ recipe }) {
           <img src={recipe.image} alt={recipe.title} />
         </div>
         <div className="large-recipe-info">
-          <p>{`Ready In ${recipe.readyInMinutes} Minutes || Prep Time : ${recipe.preparationMinutes} Minutes`}</p>
-          <p>{`${recipe.servings} Servings || ${recipe.extendedIngredients.length} Total Ingredients`}</p>
+          <p>{`Ready In ${recipe.readyInMinutes} Minutes | Prep Time : ${recipe.preparationMinutes} Minutes`}</p>
+          <p>{`${recipe.servings} Servings | ${recipe.extendedIngredients.length} Total Ingredients`}</p>
         </div>
       </div>
       <div className="large-recipe-bottom">
