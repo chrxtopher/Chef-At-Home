@@ -4,6 +4,7 @@ import { motion as m } from "framer-motion";
 
 import { getRecipe } from "../utility/api";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 import LargeRecipeItem from "../components/LargeRecipeItem";
 
 const samples = require("../samples.json");
@@ -37,6 +38,9 @@ function Recipe() {
         <h2>{recipe.title}</h2>
         <LargeRecipeItem recipe={recipe} />
       </m.div>
+      <div>
+        <Footer />
+      </div>
     </div>
   );
 }

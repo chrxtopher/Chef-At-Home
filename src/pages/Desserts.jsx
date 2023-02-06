@@ -2,6 +2,7 @@ import React from "react";
 import { motion as m } from "framer-motion";
 
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 function Desserts() {
   return (
@@ -16,6 +17,9 @@ function Desserts() {
       >
         <h1>Desserts Page</h1>
       </m.div>
+      <div>
+        <Footer />
+      </div>
     </div>
   );
 }

@@ -1,5 +1,6 @@
-import Header from "../components/Header";
 import React, { useEffect } from "react";
+import Footer from "../components/Footer";
+import Header from "../components/Header";
 import { motion as m } from "framer-motion";
 import Aos from "aos";
 import NavButton from "../components/NavButton";
@@ -75,6 +76,9 @@ function Home() {
           </div>
         </div>
       </m.div>
+      <div>
+        <Footer />
+      </div>
     </div>
   );
 }

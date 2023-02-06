@@ -2,6 +2,7 @@ import React from "react";
 import { motion as m } from "framer-motion";
 
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 import FilterRecipe from "../components/FilterRecipe";
 import "../styles/mealsPage.css";
 
@@ -27,6 +28,9 @@ function Meals() {
           dishType={["main course", "salad", "soup", "lunch", "dinner"]}
         />
       </m.div>
+      <div>
+        <Footer />
+      </div>
     </div>
   );
 }
