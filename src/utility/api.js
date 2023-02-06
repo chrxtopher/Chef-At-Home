@@ -26,7 +26,7 @@ export async function getRecipe(recipeId = 111111) {
   }
 }
 
-export async function getSimilarRecipe(recipeId = 111111) {
+export async function getOneSimilarRecipe(recipeId = 111111) {
   const url = `${BASE_URL}${recipeId}/similar?number=1&apiKey=${API_KEY}`;
 
   try {

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { getSimilarRecipe, getRecipe } from "../utility/api";
+import { getOneSimilarRecipe, getRecipe } from "../utility/api";
 import { motion as m } from "framer-motion";
 
 import Header from "../components/Header";
@@ -12,13 +12,13 @@ function SimilarRecipe() {
   const [recipe, setRecipe] = useState({});
 
   useEffect(() => {
-    async function getOneSimilarRecipe(recipeId) {
-      const response = await getSimilarRecipe(recipeId);
+    async function getSimilarRecipe(recipeId) {
+      const response = await getOneSimilarRecipe(recipeId);
       const similarRecipe = await getRecipe(response.id);
       setRecipe(similarRecipe);
     }
 
-    getOneSimilarRecipe(recipeId);
+    // getSimilarRecipe(recipeId);
   }, [recipeId]);
 
   return (
