@@ -25,3 +25,14 @@ export async function getRecipe(recipeId = 111111) {
     console.error(`ERROR :: ${error}`);
   }
 }
+
+export async function getSimilarRecipe(recipeId = 111111) {
+  const url = `${BASE_URL}${recipeId}/similar?number=1&apiKey=${API_KEY}`;
+
+  try {
+    const response = await fetch(url).then((response) => response.json());
+    return response[0];
+  } catch (error) {
+    console.error(`ERROR :: ${error}`);
+  }
+}
