@@ -1,9 +1,10 @@
 import React from "react";
 import { motion as m } from "framer-motion";
 import "../styles/largeRecipeItem.css";
+import NavButton from "./NavButton";
 
 function LargeRecipeItem({ recipe }) {
-  return (
+  return recipe.extendedIngredients ? (
     <m.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
@@ -46,7 +47,14 @@ function LargeRecipeItem({ recipe }) {
           </ul>
         </div>
       </div>
+      <NavButton
+        name="Similar Recipe"
+        active={false}
+        pageUrl={`recipe/${recipe.id}/similar`}
+      />
     </m.div>
+  ) : (
+    <h3>Loading...</h3>
   );
 }
 
