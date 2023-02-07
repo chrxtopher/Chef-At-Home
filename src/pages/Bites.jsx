@@ -23,7 +23,7 @@ function Bites() {
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
           aliquip ex ea commodo consequat.
         </p>
-        <FilterRecipe dishType={["fingerfood"]} />
+        <FilterRecipe dishType={["fingerfood", "snack"]} />
       </m.div>
       <div>
         <Footer />
