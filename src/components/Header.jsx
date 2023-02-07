@@ -13,30 +13,29 @@ function Header({ active = "none" }) {
 
       <ul>
         <li>
-          <NavButton
-            name="Meals"
-            active={active === "meals" ? true : false}
-            pageUrl="meals"
-          />
+          <NavButton name="Meals" active={active === "meals"} pageUrl="meals" />
+        </li>
+        <li>
+          <NavButton name="Bites" active={active === "bites"} pageUrl="bites" />
         </li>
         <li>
           <NavButton
-            name="Bites"
-            active={active === "bites" ? true : false}
-            pageUrl="bites"
+            name="Apps/Sides"
+            active={active === "appsandsides"}
+            pageUrl="appsandsides"
           />
         </li>
         <li>
           <NavButton
             name="Desserts"
-            active={active === "desserts" ? true : false}
+            active={active === "desserts"}
             pageUrl="desserts"
           />
         </li>
         <li>
           <NavButton
             name="Search"
-            active={active === "search" ? true : false}
+            active={active === "search"}
             pageUrl="search"
           />
         </li>
