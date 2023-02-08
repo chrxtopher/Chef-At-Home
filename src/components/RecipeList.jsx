@@ -1,6 +1,7 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import { getFilteredRecipes } from "../utility/api";
+import Loader from "./Loader";
 import SmallRecipeItem from "./SmallRecipeItem";
 import PromptCard from "./PromptCard";
 import "../styles/recipeList.css";
@@ -10,11 +11,14 @@ const cardMessages = require("../utility/cardMessages.json");
 
 function RecipeList({ filterOptions = { options: "none" } }) {
   const [recipeItems, setRecipeItems] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     async function getRecipes() {
+      setLoading(true);
       const response = await getFilteredRecipes(filterOptions);
       setRecipeItems(response.results);
+      setLoading(false);
     }
 
     // getRecipes();
@@ -31,7 +35,7 @@ function RecipeList({ filterOptions = { options: "none" } }) {
 
       {/* will render before user completes a search */}
 
-      {filterOptions.submitted && recipeItems.length <= 0 && (
+      {filterOptions.submitted && !loading && recipeItems.length <= 0 && (
         <PromptCard
           cardTitle={cardMessages.noResults.title}
           message={cardMessages.noResults.message}
@@ -39,7 +43,7 @@ function RecipeList({ filterOptions = { options: "none" } }) {
       )}
 
       {/* will render after user searches & gets no results */}
-      {filterOptions.submitted && recipeItems.length > 0 && (
+      {filterOptions.submitted && !loading && recipeItems.length > 0 && (
         <ul>
           {recipeItems.map((recipe) => {
             return (
@@ -54,6 +58,8 @@ function RecipeList({ filterOptions = { options: "none" } }) {
           })}
         </ul>
       )}
+
+      {loading && <Loader />}
     </div>
   );
 }
