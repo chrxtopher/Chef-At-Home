@@ -26,7 +26,7 @@ function RecipeList({ filterOptions = { options: "none" } }) {
 
   return (
     <div className="recipe-list">
-      {!filterOptions.submitted && (
+      {!filterOptions.submitted && !loading && (
         <PromptCard
           cardTitle={cardMessages.noSearch.title}
           message={cardMessages.noSearch.message}
