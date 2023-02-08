@@ -2,6 +2,7 @@ import React from "react";
 import { motion as m } from "framer-motion";
 import "../styles/largeRecipeItem.css";
 import NavButton from "./NavButton";
+import Loader from "./Loader";
 
 function LargeRecipeItem({ recipe }) {
   return recipe.extendedIngredients ? (
@@ -56,7 +57,7 @@ function LargeRecipeItem({ recipe }) {
       />
     </m.div>
   ) : (
-    <h3>Loading...</h3>
+    <Loader />
   );
 }
 
