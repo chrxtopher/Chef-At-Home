@@ -1,21 +1,23 @@
 .small-recipe-item {
-  border-radius: 30px;
+  border-radius: 20px;
   display: flex;
   flex-direction: column;
   list-style: none;
   margin: 1rem;
-  padding: 0.5rem 1rem 1rem 1rem;
+  padding: 0.5rem 1.5rem 1rem 1.5rem;
   justify-content: center;
   align-items: center;
   text-align: center;
   background-color: rgba(35, 35, 35, 1);
-  box-shadow: 0 0 10px 10px rgb(35, 35, 35, 1) inset;
-  width: 30rem;
+  box-shadow: 0 0 10px 10px rgb(20, 20, 20, 1) inset;
+  width: 25rem;
+  height: 25rem;
 }
 
 .small-recipe-item img {
   border-radius: 5px;
   width: 85%;
+  margin-bottom: 0.5rem;
 }
 
 .small-recipe-item h3 {
