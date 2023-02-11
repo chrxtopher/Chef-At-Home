@@ -63,7 +63,7 @@ function Home() {
         </div>
         <div className="home-section" data-aos="fade-right">
           <div className="home-section-title desserts-title">
-            <h3>Indulge in Sweetness</h3>
+            <h3>Appetizers & Sides</h3>
           </div>
           <div className="home-section-desc">
             <p>
@@ -72,7 +72,21 @@ function Home() {
               ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
               tempor incididunt ut labore et dolore magna aliqua.
             </p>
+            <NavButton name="Browse" active={false} pageUrl="appsandsides" />
+          </div>
+        </div>
+        <div className="home-section" data-aos="fade-right">
+          <div className="home-section-desc">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem
+              ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua.
+            </p>
             <NavButton name="Browse" active={false} pageUrl="desserts" />
+          </div>
+          <div className="home-section-title desserts-title">
+            <h3>Indulge in Sweetness</h3>
           </div>
         </div>
       </m.div>
