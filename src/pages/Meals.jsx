@@ -4,7 +4,6 @@ import { motion as m } from "framer-motion";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import FilterRecipe from "../components/FilterRecipe";
-import "../styles/mealsPage.css";
 
 function Meals() {
   return (
