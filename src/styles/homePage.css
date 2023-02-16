@@ -60,7 +60,11 @@ body {
 }
 
 .bites-title {
-  background-image: url("../images/appetizers.jpeg");
+  background-image: url("../images/bites.jpeg");
+}
+
+.apps-title {
+  background-image: url("../images/sides.jpeg");
 }
 
 .desserts-title {
