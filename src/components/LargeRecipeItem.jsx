@@ -57,7 +57,9 @@ function LargeRecipeItem({ recipe }) {
       />
     </m.div>
   ) : (
-    <Loader />
+    <div className="loader-div">
+      <Loader />
+    </div>
   );
 }
 
