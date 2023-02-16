@@ -51,7 +51,7 @@ function RecipeList({ filterOptions = { options: "none" } }) {
                 <SmallRecipeItem
                   id={recipe.id}
                   title={recipe.title}
-                  image={recipe.image}
+                  imageUrl={recipe.image}
                 />
               </li>
             );

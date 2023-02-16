@@ -4,7 +4,7 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import "../styles/smallRecipeItem.css";
 
-function SmallRecipeItem({ id, title = "title", image }) {
+function SmallRecipeItem({ id, title = "title", imageUrl }) {
   useEffect(() => {
     Aos.init({});
   }, []);
@@ -12,7 +12,7 @@ function SmallRecipeItem({ id, title = "title", image }) {
   return (
     <div className="small-recipe-item" data-aos="zoom-in">
       <h3>{title}</h3>
-      <img src={image} alt={title} />
+      <img src={imageUrl} alt={title} />
       <NavButton name="View" active={false} pageUrl={`recipe/${id}`} />
     </div>
   );
