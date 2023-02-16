@@ -31,7 +31,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 65vh;
+  height: 90vh;
   padding: 16rem;
   background-image: url("../images/table-of-food.jpeg");
   background-size: cover;
