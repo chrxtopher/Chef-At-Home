@@ -6,6 +6,7 @@ import { motion as m } from "framer-motion";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import LargeRecipeItem from "../components/LargeRecipeItem";
+import Loader from "../components/Loader";
 
 function SimilarRecipe() {
   const { recipeId } = useParams();
@@ -21,7 +22,7 @@ function SimilarRecipe() {
     // getSimilarRecipe(recipeId);
   }, [recipeId]);
 
-  return (
+  return recipe.extendedIngredients ? (
     <div>
       <header>
         <Header />
@@ -38,6 +39,8 @@ function SimilarRecipe() {
         <Footer />
       </div>
     </div>
+  ) : (
+    <Loader />
   );
 }
 
