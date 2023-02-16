@@ -5,6 +5,8 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import FilterRecipe from "../components/FilterRecipe";
 
+const cardMessages = require("../utility/cardMessages.json");
+
 function Bites() {
   return (
     <div>
@@ -16,13 +18,11 @@ function Bites() {
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
       >
-        <h1>Bites for Everyone</h1>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.
-        </p>
+        <div className="bites-header">
+          <h1 className="recipes-page-title">{cardMessages.bites.title}</h1>
+          <p className="recipes-page-subtitle">{cardMessages.bites.subtitle}</p>
+        </div>
+
         <FilterRecipe dishType={["fingerfood", "snack"]} />
       </m.div>
       <div>
