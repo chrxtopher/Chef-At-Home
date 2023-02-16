@@ -1,0 +1,38 @@
+.recipes-page-subtitle {
+  font-size: 1.5rem;
+  max-width: 60%;
+  margin-bottom: 50px;
+}
+
+.recipes-page-title, .recipes-page-subtitle {
+  border-radius: 8px;
+  background-color: rgb(20, 20, 20, .7);
+  box-shadow: 0 0 10px 10px rgb(20, 20, 20, .7);
+  padding: 10px;
+}
+
+.meals-header, .bites-header, .apps-header, .desserts-header {
+  margin: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  box-shadow: 0 0 10px 10px rgb(20, 20, 20) inset;
+}
+
+.meals-header {
+  background-image: url("../images/main-course.jpeg");
+}
+
+.bites-header {
+  background-image: url("../images/bites.jpeg");
+}
+
+.apps-header {
+  background-image: url("../images/sides.jpeg");
+}
+
+.desserts-header {
+  background-image: url("../images/desserts.jpeg");
+}
