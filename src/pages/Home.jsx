@@ -26,36 +26,21 @@ function Home() {
       >
         <h1>Chef at Home</h1>
         <div className="home-welcome">
-          <h2>Welcome to Chef at Home</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
-          </p>
+          <h2>{cardMessages.home.title}</h2>
+          <p>{cardMessages.home.description}</p>
         </div>
         <div className="home-section" data-aos="fade-right">
           <div className="home-section-title meals-title">
             <h3>{cardMessages.meals.title}</h3>
           </div>
           <div className="home-section-desc">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem
-              ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua.
-            </p>
+            <p>{cardMessages.meals.description}</p>
             <NavButton name="Browse" active={false} pageUrl="meals" />
           </div>
         </div>
         <div className="home-section" data-aos="fade-right">
           <div className="home-section-desc">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem
-              ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua.
-            </p>
+            <p>{cardMessages.bites.description}</p>
             <NavButton name="Browse" active={false} pageUrl="bites" />
           </div>
           <div className="home-section-title bites-title">
@@ -67,23 +52,13 @@ function Home() {
             <h3>{cardMessages.appsAndSides.title}</h3>
           </div>
           <div className="home-section-desc">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem
-              ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua.
-            </p>
+            <p>{cardMessages.appsAndSides.description}</p>
             <NavButton name="Browse" active={false} pageUrl="appsandsides" />
           </div>
         </div>
         <div className="home-section" data-aos="fade-right">
           <div className="home-section-desc">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem
-              ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua.
-            </p>
+            <p>{cardMessages.desserts.description}</p>
             <NavButton name="Browse" active={false} pageUrl="desserts" />
           </div>
           <div className="home-section-title desserts-title">
