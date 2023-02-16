@@ -23,7 +23,7 @@ function Bites() {
           <p className="recipes-page-subtitle">{cardMessages.bites.subtitle}</p>
         </div>
 
-        <FilterRecipe dishType={["fingerfood", "snack"]} />
+        <FilterRecipe dishType={["fingerfood"]} />
       </m.div>
       <div>
         <Footer />
