@@ -32,13 +32,6 @@ function Header({ active = "none" }) {
             pageUrl="desserts"
           />
         </li>
-        <li>
-          <NavButton
-            name="Search"
-            active={active === "search"}
-            pageUrl="search"
-          />
-        </li>
       </ul>
     </nav>
   );
