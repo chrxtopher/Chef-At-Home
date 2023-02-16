@@ -24,7 +24,6 @@ function Home() {
         transition={{ duration: 1 }}
         className="home-page"
       >
-        <h1>Chef at Home</h1>
         <div className="home-welcome">
           <h2>{cardMessages.home.title}</h2>
           <p>{cardMessages.home.description}</p>
