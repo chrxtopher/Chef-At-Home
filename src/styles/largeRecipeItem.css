@@ -1,10 +1,13 @@
 .large-recipe-item {
-  padding: 2rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .large-recipe-top {
   display: flex;
   flex-direction: column;
+  text-align: center;
 }
 
 .large-recipe-img img {
@@ -37,6 +40,7 @@
 .large-recipe-ingredients {
   padding: 1rem;
   width: 45%;
+  text-align: center;
 }
 
 .large-recipe-instructions {
@@ -46,5 +50,10 @@
 
 hr {
   border: 1px solid rgba(0, 145, 60, 0.8);
+}
+
+.loader-div {
+  display: flex;
+  justify-content: center;
 }
 
