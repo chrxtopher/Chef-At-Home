@@ -6,5 +6,25 @@
   "noResults": {
     "title": "No Results",
     "message": "There was nothing on the menu that matched your filter options. Try adjusting your selections."
+  },
+  "meals": {
+    "title": "Mains Course Meals",
+    "subtitle": "Kiss hunger goodbye."
+  },
+  "bites": {
+    "title": "Bites for Everyone",
+    "subtitle": "Finger food and snacks that are easy to eat."
+  },
+  "appsAndSides": {
+    "title": "Appetizers & Sides",
+    "subtitle": "Complements for your main course."
+  },
+  "desserts": {
+    "title": "Indulge in Sweetness",
+    "subtitle": "Satisfy that sweet tooth."
+  },
+  "search": {
+    "title": "",
+    "subtitle": ""
   }
 }
