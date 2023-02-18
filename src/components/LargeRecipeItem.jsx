@@ -51,7 +51,7 @@ function LargeRecipeItem({ recipe }) {
         </div>
       </div>
       <NavButton
-        name="Similar Recipe"
+        name="View Similar Recipe"
         active={false}
         pageUrl={`recipe/${recipe.id}/similar`}
       />
